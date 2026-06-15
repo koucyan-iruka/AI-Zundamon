@@ -1,0 +1,42 @@
+{
+	"Type": "Live2D Expression",
+	"FadeInTime": 0.5,
+	"FadeOutTime": 0.5,
+	"Parameters": [
+		{
+			"Id": "ParamArmLowerL",
+			"Value": -1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamArmLowerR",
+			"Value": -1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamArmJawL",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamArmWaistR",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"Value": 0.3,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowLForm",
+			"Value": 0.3,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowRForm",
+			"Value": 0.3,
+			"Blend": "Add"
+		}
+	]
+}

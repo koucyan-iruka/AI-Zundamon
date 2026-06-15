@@ -1,0 +1,2043 @@
+{
+    "expressions": [
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/expression4.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fadeIn": 500,
+            "fadeOut": 500,
+            "fileKey": "motion/exp_03.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "3",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fadeIn": 500,
+            "fadeOut": 500,
+            "fileKey": "motion/exp_01.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "1",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fadeIn": 500,
+            "fadeOut": 500,
+            "fileKey": "motion/exp_02.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "2",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fadeIn": 500,
+            "fadeOut": 500,
+            "fileKey": "motion/exp_04.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "4",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fadeIn": 500,
+            "fadeOut": 500,
+            "fileKey": "motion/exp_05.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "5",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_Jaw.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "T",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_Waist.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "R",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_Upper3.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "I",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_Upper.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "W",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_Middle2.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/exp_laugh2.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/exp_angry.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "6",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/exp_sad.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/exp_laugh.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "7",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/exp_surprise.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "0",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/exp_shy2.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "Clear",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "M",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/exp_sad2.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "8",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/exp_shy.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "9",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_chop.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "O",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_cross.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "P",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_Middle.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "Q",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_Middle3.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "Y",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_mouth.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "E",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "fileKey": "motion/pose_Upper2.exp3.json",
+            "isExclusiveGroup": false,
+            "name": "",
+            "shortcut": "U",
+            "shortcutToggle": true
+        }
+    ],
+    "major": 3,
+    "minor": 0,
+    "model": {
+        "description": "",
+        "icon": "icon_nL.png",
+        "name": "zundamon",
+        "names": {
+            "ja": "ずんだもん（坂本アヒル式）"
+        }
+    },
+    "motions": [
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/RaiseB.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/Chop2A.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/Chop2B.motion3.json",
+            "name": "",
+            "overridingPhysics": false,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/Chop2C.motion3.json",
+            "name": "",
+            "overridingPhysics": false,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/RaiseA.motion3.json",
+            "name": "",
+            "overridingPhysics": false,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/RaiseC.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/RaiseD.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "Normal",
+            "fileKey": "motion/mtnBody_angry.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "A",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_laugh.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "S",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_laugh2.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_laugh3.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "D",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_no.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_no2.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "F",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_no3.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "G",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_point.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "H",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_point2.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_point3.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_think.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "J",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_think2.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_think3.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_tremble.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "K",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_wave.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "L",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_wave2.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_wave3.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnBody_yes.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "Z",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnFace_laugh.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "X",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnFace_sad.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "C",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnFace_shy.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "V",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "motion/mtnFace_surprise.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "B",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "Loop",
+            "fileKey": "motion/mtnFace_talk.motion3.json",
+            "name": "",
+            "overridingPhysics": true,
+            "shortcut": "",
+            "shortcutToggle": true
+        },
+        {
+            "backgroundEnabled": true,
+            "event": "",
+            "fileKey": "Clear",
+            "name": "",
+            "overridingPhysics": false,
+            "shortcut": "M",
+            "shortcutToggle": true
+        }
+    ],
+    "parameter": {
+        "automationConnections": [
+            {
+                "controlId": "ParamBreath",
+                "cycle": 3235,
+                "max": 1,
+                "min": 0,
+                "offset": 0.5,
+                "peak": 0.5,
+                "wave": true
+            }
+        ],
+        "trackingConnections": [
+            {
+                "controlId": "ParamAngleX",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 30,
+                    "min": -30
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "Yaw",
+                "weight": 0.8999999761581421,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamAngleY",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 30,
+                    "min": -30
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "Pitch",
+                "weight": 0.8999999761581421,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamAngleZ",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 30,
+                    "min": -30
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "Roll",
+                "weight": 0.8999999761581421,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamBodyAngleX",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 30,
+                    "min": -30
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "Yaw",
+                "weight": 0.800000011920929,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamBodyAngleY",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 30,
+                    "min": -30
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "Pitch",
+                "weight": 0.800000011920929,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamBodyAngleZ",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 30,
+                    "min": -30
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "Roll",
+                "weight": 0.800000011920929,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamBrowLForm",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "BrowYLeft",
+                "weight": 0.75,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamBrowRForm",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "BrowYRight",
+                "weight": 0.75,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamEyeROpen",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.5,
+                                "y": 0.8333333134651184
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0.8333333134651184
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 0.8333333134651184
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 2,
+                    "min": 0
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "EyeOpenRight",
+                "weight": 0.8999999761581421,
+                "weightForceZero": true
+            },
+            {
+                "controlId": "ParamEyeBallX",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 1.5,
+                "smoothLevel": 0,
+                "sourceId": "EyeLookX",
+                "weight": 0.75,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamEyeBallY",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 1.5,
+                "smoothLevel": 0,
+                "sourceId": "EyeLookY",
+                "weight": 0.75,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamMouthOpenY",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": 0
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "MouthOpen",
+                "weight": 1,
+                "weightForceZero": true
+            },
+            {
+                "controlId": "ParamMouthForm",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 1.5,
+                "smoothLevel": 0,
+                "sourceId": "MouthSpread",
+                "weight": 0.8999999761581421,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamEyeLSmile",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.5,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 1.5,
+                "smoothLevel": 0,
+                "sourceId": "MouthSpread",
+                "weight": 0.8999999761581421,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamEyeRSmile",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.5,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 1.5,
+                "smoothLevel": 0,
+                "sourceId": "MouthSpread",
+                "weight": 0.8999999761581421,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "<X>",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 0,
+                "smoothLevel": 5,
+                "sourceId": "PositionX",
+                "weight": 0.20000000298023224,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "<Y>",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 0,
+                "smoothLevel": 5,
+                "sourceId": "PositionY",
+                "weight": 0.20000000298023224,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "<Z>",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 0,
+                "smoothLevel": 5,
+                "sourceId": "PositionZ",
+                "weight": 0.10000000149011612,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamcheekPuff",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": 0
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "ARKitCheekPuff",
+                "weight": 0.8999999761581421,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamEyeLOpen",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.5,
+                                "y": 0.83203125
+                            },
+                            "nextControl": {
+                                "x": 0.2999999523162842,
+                                "y": 0.83203125
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 0.83203125
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 2,
+                    "min": 0
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "EyeOpenLeft",
+                "weight": 0.8999999761581421,
+                "weightForceZero": true
+            },
+            {
+                "controlId": "ParamArmLowerR",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 1
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.2265625,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.29999542236328125,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.7000007629394531,
+                                "y": 1
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.234375,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.3000003397464752,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.7000002264976501,
+                                "y": 0
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 0
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": 0
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "HandRightFound",
+                "weight": 0.4000000059604645,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamArmUpperR",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.74609375,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.3000030517578125,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.70001220703125,
+                                "y": 0
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.77734375,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.3000030517578125,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.6999969482421875,
+                                "y": 1
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 2,
+                "smoothLevel": 0,
+                "sourceId": "HandRightPositionY",
+                "weight": 0.4000000059604645,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamArmWaistR",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 1
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.23828125,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.3000001311302185,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.6999995112419128,
+                                "y": 0
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.7000000476837158,
+                                "y": 0
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 2,
+                "smoothLevel": 0,
+                "sourceId": "HandRightPositionY",
+                "weight": 0.4000000059604645,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamArmMouthR",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.7734375,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.3000030517578125,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.6999997496604919,
+                                "y": 0
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.78125,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.3000030517578125,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.6999969482421875,
+                                "y": 1
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": 0
+                },
+                "invert": false,
+                "scale": 2,
+                "smoothLevel": 0,
+                "sourceId": "HandRightFound",
+                "weight": 0.4000000059604645,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamArmMiddleR",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.7734375,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.300018310546875,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.70001220703125,
+                                "y": 0
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.78515625,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.29998779296875,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.6999969482421875,
+                                "y": 1
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 2,
+                "smoothLevel": 0,
+                "sourceId": "HandRightPositionX",
+                "weight": 0.4000000059604645,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamArmLowerL",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 1
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.74609375,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.3000030517578125,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.6999969482421875,
+                                "y": 1
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.75390625,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.2999991178512573,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.6999999284744263,
+                                "y": 1
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.765625,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000051856040955,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.6999969482421875,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 0
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": 0
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "HandLeftFound",
+                "weight": 0.4000000059604645,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamArmMouthL",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.75390625,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.3000030517578125,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.6999996900558472,
+                                "y": 0
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.765625,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.3000030517578125,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.6999969482421875,
+                                "y": 1
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": 0
+                },
+                "invert": false,
+                "scale": 1,
+                "smoothLevel": 0,
+                "sourceId": "HandLeftFound",
+                "weight": 0.4000000059604645,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamArmUpperL",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.5,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.7421875,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.29999983310699463,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.699998676776886,
+                                "y": 0
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.75390625,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.3000018298625946,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.7000020146369934,
+                                "y": 1
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 2,
+                "smoothLevel": 0,
+                "sourceId": "HandLeftPositionY",
+                "weight": 0.4000000059604645,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamArmWaistL",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 1
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.10546875,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.3000001907348633,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.6999999284744263,
+                                "y": 1
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.25,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.2999999523162842,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.699998676776886,
+                                "y": 0
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.5,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.7000000476837158,
+                                "y": 0
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 2,
+                "smoothLevel": 0,
+                "sourceId": "HandLeftPositionY",
+                "weight": 0.4000000059604645,
+                "weightForceZero": false
+            },
+            {
+                "controlId": "ParamArmMiddleL",
+                "curve": {
+                    "keyframes": [
+                        {
+                            "anchor": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.5,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.30000001192092896,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 0
+                            },
+                            "type": 1
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.69140625,
+                                "y": 0
+                            },
+                            "nextControl": {
+                                "x": 0.29999879002571106,
+                                "y": 0
+                            },
+                            "previousControl": {
+                                "x": 0.7000003457069397,
+                                "y": 0
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 0.75390625,
+                                "y": 1
+                            },
+                            "nextControl": {
+                                "x": 0.30000039935112,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.6999969482421875,
+                                "y": 1
+                            },
+                            "type": 2
+                        },
+                        {
+                            "anchor": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "previousControl": {
+                                "x": 0.699999988079071,
+                                "y": 1
+                            },
+                            "type": 0
+                        }
+                    ],
+                    "max": 1,
+                    "min": -1
+                },
+                "invert": false,
+                "scale": 2,
+                "smoothLevel": 0,
+                "sourceId": "HandLeftPositionX",
+                "weight": 0.4000000059604645,
+                "weightForceZero": false
+            }
+        ]
+    }
+}
