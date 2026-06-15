@@ -70,8 +70,17 @@ function createPoser(app: PIXI.Application, model: any) {
 
     let state: State = "idle";
     let t = 0;
+    let motionActive = false;
     // cur tracks the last value we wrote per param (initialises to target on first write)
     const cur: Record<string, number> = {};
+
+    const ARM_PARAMS = [
+        "ParamArmCross", "ParamArmLowerL", "ParamArmLowerR", "ParamArmChopR",
+        "ParamArmJawL", "ParamArmUpperL", "ParamArmUpperR", "ParamArmMiddleL",
+        "ParamArmMiddleR", "ParamArmWaistL", "ParamArmWaistR", "ParamArmMouthL",
+        "ParamArmMouthR", "ParamArmL", "ParamHandL", "ParamArmR", "ParamHandR",
+        "ParamFingerR", "ParamArmChopRX", "ParamArmChopRX2", "ParamShrug",
+    ];
 
     // Lip-sync
     let lipAnalyser: AnalyserNode | null = null;
@@ -102,6 +111,15 @@ function createPoser(app: PIXI.Application, model: any) {
 
         // ── breathing (always active) ──────────────────────────────────────
         ease("ParamBreath", (Math.sin(t * 1.1) + 1) * 0.5, dt, 1.5);
+
+        // ── arm reset after motion ends ────────────────────────────────────
+        if (motionActive) {
+            const mgr = (model as any).internalModel?.motionManager;
+            if (!mgr || mgr.isFinished()) motionActive = false;
+        }
+        if (!motionActive) {
+            for (const p of ARM_PARAMS) ease(p, 0, dt, 2);
+        }
 
         // ── state-dependent head / eye / body ──────────────────────────────
         if (state === "idle") {
@@ -173,6 +191,23 @@ function createPoser(app: PIXI.Application, model: any) {
         try { (model as any).expression(name); } catch (_) {}
     }
 
+    // ── body motion (all motions are in the unnamed "" group) ────────────────
+    function playMotion(index: number) {
+        try { (model as any).motion("", index); motionActive = true; } catch (_) {}
+    }
+
+    function pick(arr: number[]) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+    const MOTION: Record<string, number[]> = {
+        _think:       [10, 11, 12],  // mtnBody_think/2/3
+        exp_angry:    [0],           // mtnBody_angry
+        exp_sad:      [19],          // mtnFace_sad
+        exp_shy:      [20],          // mtnFace_shy
+        exp_surprise: [21],          // mtnFace_surprise
+        exp_laugh:    [1, 2, 3, 18], // mtnBody_laugh/2/3, mtnFace_laugh
+        exp_smile:    [7, 8, 17],    // mtnBody_point/2, mtnBody_yes
+    };
+
     // ── audio / lip-sync playback ────────────────────────────────────────────
     async function speak(audioData: ArrayBuffer, onDone: () => void) {
         if (lipCtx) {
@@ -199,7 +234,19 @@ function createPoser(app: PIXI.Application, model: any) {
         }
     }
 
-    return { set: (s: State) => { state = s; }, setExpression, speak };
+    function stopMotions() {
+        try { (model as any).internalModel.motionManager.stopAllMotions(); } catch (_) {}
+    }
+
+    return {
+        set: (s: State) => { state = s; },
+        setExpression,
+        speak,
+        playMotion: (expr: string) => {
+            stopMotions();
+            playMotion(pick(MOTION[expr] ?? [17]));
+        },
+    };
 }
 
 // ─── VOICEVOX ────────────────────────────────────────────────────────────────
@@ -257,6 +304,7 @@ function setupChat(poser: Poser) {
         input.value = "";
         poser.set("thinking");
         poser.setExpression("exp_think");
+        poser.playMotion("_think"); // mtnBody_think/2/3 をランダム再生
         showBubble("考え中なのだ...", true);
 
         function goIdle() {
@@ -275,7 +323,9 @@ function setupChat(poser: Poser) {
             history.push({ role: "assistant", content: reply });
 
             poser.set("answering");
-            poser.setExpression(detectExpression(reply));
+            const expr = detectExpression(reply);
+            poser.setExpression(expr);
+            poser.playMotion(expr);
             showBubble(reply);
 
             const segments = reply
