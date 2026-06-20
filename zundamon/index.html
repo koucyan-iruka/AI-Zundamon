@@ -120,8 +120,14 @@
             @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
 
             /* toolbars */
-            .toolbar { position: fixed; top: 18px; right: 18px; }
-            .toolbar-left { position: fixed; top: 18px; left: 18px; }
+            .toolbar {
+                position: fixed;
+                top: 18px;
+                right: 18px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
             .tool-btn {
                 width: 42px;
                 height: 42px;
@@ -156,7 +162,7 @@
             .model-panel {
                 position: fixed;
                 top: 70px;
-                left: 18px;
+                right: 18px;
                 width: 240px;
                 padding: 14px;
                 background: var(--surface);
@@ -241,14 +247,22 @@
         <div id="stage"></div>
         <div class="bubble" id="bubble"></div>
 
-        <!-- Model swap button (left) -->
-        <div class="toolbar-left">
+        <!-- Toolbar (right) -->
+        <div class="toolbar">
             <button class="tool-btn" id="modelToggle" title="Live2Dモデル切り替え">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                     <path d="M2 17l10 5 10-5"/>
                     <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </button>
+            <button class="tool-btn" id="bgToggle" title="background">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
                 </svg>
             </button>
         </div>
@@ -266,18 +280,6 @@
                 <input type="file" id="modelUpload" webkitdirectory multiple />
             </label>
             <div class="model-status" id="modelStatus"></div>
-        </div>
-
-        <!-- Background button (right) -->
-        <div class="toolbar">
-            <button class="tool-btn" id="bgToggle" title="background">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <path d="M21 15l-5-5L5 21" />
-                </svg>
-            </button>
         </div>
 
         <div class="bg-panel" id="bgPanel">

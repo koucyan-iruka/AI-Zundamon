@@ -124,6 +124,12 @@ async function main() {
     setupChat(() => activePoser);
     setupBackground();
     setupModelSwap(swapModel);
+
+    // パネルの排他制御：片方を開いたらもう片方を閉じる
+    const modelPanel = document.getElementById("modelPanel")!;
+    const bgPanel    = document.getElementById("bgPanel")!;
+    document.getElementById("modelToggle")!.addEventListener("click", () => bgPanel.classList.remove("show"));
+    document.getElementById("bgToggle")!   .addEventListener("click", () => modelPanel.classList.remove("show"));
 }
 
 // ─── poser ────────────────────────────────────────────────────────────────────
