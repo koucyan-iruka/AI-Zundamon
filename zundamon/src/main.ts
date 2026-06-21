@@ -47,11 +47,51 @@ const VOICE_EMOTION: Record<string, number> = {
     surprise: 3,
 };
 
+// ─── Virtual model file serving ───────────────────────────────────────────────
+
+const VIRTUAL_PREFIX = "/live2d-user-model/";
+const userModelFiles = new Map<string, Blob>();
+
+function installFetchInterceptor() {
+    const orig = window.fetch.bind(window);
+    (window as any).fetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
+        const urlStr = typeof input === "string" ? input
+            : input instanceof URL ? input.href
+            : (input as Request).url;
+        try {
+            const parsed = new URL(urlStr, location.href);
+            if (parsed.pathname.startsWith(VIRTUAL_PREFIX)) {
+                const key = parsed.pathname.slice(VIRTUAL_PREFIX.length);
+                const blob = userModelFiles.get(key);
+                if (blob) {
+                    const ab = await blob.arrayBuffer();
+                    return new Response(ab, {
+                        status: 200,
+                        headers: { "Content-Type": blob.type || guessMime(key) },
+                    });
+                }
+            }
+        } catch (_) {}
+        return orig(input as any, init);
+    };
+}
+
+function guessMime(name: string): string {
+    if (name.endsWith(".json"))  return "application/json";
+    if (name.endsWith(".png"))   return "image/png";
+    if (name.endsWith(".jpg") || name.endsWith(".jpeg")) return "image/jpeg";
+    return "application/octet-stream";
+}
+
+// ─── main ─────────────────────────────────────────────────────────────────────
+
 async function main() {
     const app = new PIXI.Application({ resizeTo: window, backgroundAlpha: 0 });
     document.getElementById("stage")!.appendChild(app.view as HTMLCanvasElement);
 
-    const model = await Live2DModel.from("/zundamon/zundamon.model3.json");
+    installFetchInterceptor();
+
+    let model = await Live2DModel.from("/zundamon/zundamon.model3.json");
     app.stage.addChild(model);
 
     function layout() {
@@ -63,17 +103,36 @@ async function main() {
         model.scale.set(Math.min(scaleH, scaleW) * 0.92);
         model.anchor.set(0.5, 0.5);
         model.x = app.renderer.width / 2;
-        model.y = availH / 2;  // centre within the space above the UI
+        model.y = availH / 2;
     }
     layout();
     window.addEventListener("resize", layout);
 
-    const poser = createPoser(app, model);
-    setupChat(poser);
+    let activePoser = createPoser(app, model);
+
+    async function swapModel(src: string) {
+        activePoser.destroy();
+        app.stage.removeChild(model);
+        try { (model as any).destroy(); } catch (_) {}
+
+        model = await Live2DModel.from(src);
+        app.stage.addChild(model);
+        layout();
+        activePoser = createPoser(app, model);
+    }
+
+    setupChat(() => activePoser);
     setupBackground();
+    setupModelSwap(swapModel);
+
+    // パネルの排他制御：片方を開いたらもう片方を閉じる
+    const modelPanel = document.getElementById("modelPanel")!;
+    const bgPanel    = document.getElementById("bgPanel")!;
+    document.getElementById("modelToggle")!.addEventListener("click", () => bgPanel.classList.remove("show"));
+    document.getElementById("bgToggle")!   .addEventListener("click", () => modelPanel.classList.remove("show"));
 }
 
-// ─── poser ──────────────────────────────────────────────────────────────────
+// ─── poser ────────────────────────────────────────────────────────────────────
 
 function createPoser(app: PIXI.Application, model: any) {
     const core = model.internalModel.coreModel;
@@ -90,15 +149,11 @@ function createPoser(app: PIXI.Application, model: any) {
     const cur: Record<string, number> = {};
 
     // 表情専用パラメータ（ティッカーで管理しないがリセット時に 0 に戻す必要があるもの）
-    // 顔・装飾系パラメータのみ
-    // ParamEdamame* は expressionManager の FadeOut に任せる（ticker との競合でエダマメが消えるため）
-    // ParamArm* はボディモーションが管理するので含めない
     const EXP_PARAMS = [
         "ParamMouthForm",
         "ParamEyeType", "ParamEyeType2", "ParamEyeType3", "ParamEyeType5",
         "ParamBrowLForm", "ParamBrowRForm", "ParamBrowLY", "ParamBrowRY",
         "ParamPatternBrow", "ParamPatternMouth",
-        // ParamGroup7（顔の色・装飾系）一式
         "ParamTears", "ParamCheek", "ParamCheek2", "ParamHeart",
         "ParamHighlight", "ParamHighlight2", "ParamBlackEyes",
         "ParamFaceColor", "ParamFaceColor2",
@@ -121,13 +176,15 @@ function createPoser(app: PIXI.Application, model: any) {
     // Cursor tracking
     let mx = 0, my = 0, mouseActive = false;
     let mouseTimer: ReturnType<typeof setTimeout> | null = null;
-    window.addEventListener("mousemove", (e) => {
+
+    const onMouseMove = (e: MouseEvent) => {
         mx = (e.clientX / window.innerWidth  - 0.5) * 2; // -1…1 (left→right)
         my = (e.clientY / window.innerHeight - 0.5) * 2; // -1…1 (top→bottom)
         mouseActive = true;
         if (mouseTimer) clearTimeout(mouseTimer);
         mouseTimer = setTimeout(() => { mouseActive = false; }, 3000);
-    });
+    };
+    window.addEventListener("mousemove", onMouseMove);
 
     // Smooth interpolation toward target; initialises cur[id] to target on first call
     function ease(id: string, target: number, dt: number, speed = 5) {
@@ -136,7 +193,7 @@ function createPoser(app: PIXI.Application, model: any) {
         set(id, cur[id]);
     }
 
-    app.ticker.add(() => {
+    const tickerFn = () => {
         const dt = app.ticker.deltaMS / 1000;
         t += dt;
 
@@ -146,7 +203,6 @@ function createPoser(app: PIXI.Application, model: any) {
         // ── state-dependent head / eye / body ──────────────────────────────
         if (state === "idle") {
             if (mouseActive) {
-                // Cursor follow: mx left/right → head turn (AngleZ), my up/down → AngleY
                 ease("ParamAngleZ",   mx * 28,   dt);
                 ease("ParamAngleY",  -my * 18,   dt);
                 ease("ParamAngleX",   my * 10,   dt);
@@ -155,7 +211,6 @@ function createPoser(app: PIXI.Application, model: any) {
                 ease("ParamBodyAngleX", mx * 12, dt, 2);
                 ease("ParamBodyAngleZ", mx *  5, dt, 2);
             } else {
-                // Wandering gaze – low-frequency Lissajous-like motion
                 ease("ParamAngleX",   Math.sin(t * 0.31) * 14,  dt, 3);
                 ease("ParamAngleY",   Math.sin(t * 0.23) * 10,  dt, 3);
                 ease("ParamAngleZ",   Math.sin(t * 0.19) * 18,  dt, 3);
@@ -170,12 +225,11 @@ function createPoser(app: PIXI.Application, model: any) {
             }
 
         } else if (state === "thinking") {
-            // Look diagonally upward, head slightly tilted
             ease("ParamAngleX",  3 + Math.sin(t * 0.35) * 4, dt);
-            ease("ParamAngleY",  18,                          dt);  // look up
-            ease("ParamAngleZ", -10,                          dt);  // turn left
-            ease("ParamEyeBallX", -0.3, dt);                        // eyes left
-            ease("ParamEyeBallY",  0.7, dt);                        // eyes up
+            ease("ParamAngleY",  18,                          dt);
+            ease("ParamAngleZ", -10,                          dt);
+            ease("ParamEyeBallX", -0.3, dt);
+            ease("ParamEyeBallY",  0.7, dt);
             ease("ParamBodyAngleX",  4, dt, 1.5);
             ease("ParamBodyAngleZ", -3, dt, 1.5);
             if (!eyeExprActive) {
@@ -233,7 +287,8 @@ function createPoser(app: PIXI.Application, model: any) {
         } else {
             ease("ParamMouthOpenY", 0, dt, 3);
         }
-    });
+    };
+    app.ticker.add(tickerFn);
 
     // ── expression ──────────────────────────────────────────────────────────
     function setExpression(name: string | null) {
@@ -304,11 +359,15 @@ function createPoser(app: PIXI.Application, model: any) {
         speak,
         stop: () => stopMotions(),
         blink: () => { blinkT = 0; },
-        // stop→start を Cubism のモーションクロスフェード（FadeInTime）に任せることで
-        // 腕パーツの中間値による消失・半透明化を避ける
         playMotion: (expr: string) => {
             stopMotions();
             playMotion(pick(MOTION[expr] ?? [17]));
+        },
+        destroy: () => {
+            app.ticker.remove(tickerFn);
+            window.removeEventListener("mousemove", onMouseMove);
+            if (mouseTimer) clearTimeout(mouseTimer);
+            if (lipCtx) { lipCtx.close().catch(() => {}); lipCtx = null; lipAnalyser = null; }
         },
     };
 }
@@ -352,7 +411,7 @@ async function askOllama(messages: Message[]): Promise<{ text: string; emotion: 
 
 type Poser = ReturnType<typeof createPoser>;
 
-function setupChat(poser: Poser) {
+function setupChat(getPoser: () => Poser) {
     const input  = document.getElementById("chatInput") as HTMLInputElement;
     const send   = document.getElementById("sendBtn")   as HTMLButtonElement;
     const bubble = document.getElementById("bubble")    as HTMLDivElement;
@@ -372,6 +431,7 @@ function setupChat(poser: Poser) {
         if (!text || busy) return;
         busy = true;
         input.value = "";
+        const poser = getPoser();
         poser.set("thinking");
         poser.setExpression("exp_think");
         poser.playMotion("_think"); // mtnBody_think/2/3 をランダム再生
@@ -503,6 +563,73 @@ function setupBackground() {
         const reader = new FileReader();
         reader.onload = () => applyBackground(`url(${reader.result})`);
         reader.readAsDataURL(file);
+    });
+}
+
+// ─── Model swap ───────────────────────────────────────────────────────────────
+
+function setupModelSwap(onSwap: (src: string) => Promise<void>) {
+    const toggle   = document.getElementById("modelToggle")  as HTMLButtonElement;
+    const panel    = document.getElementById("modelPanel")   as HTMLDivElement;
+    const urlInput = document.getElementById("modelUrl")     as HTMLInputElement;
+    const loadBtn  = document.getElementById("modelLoadUrl") as HTMLButtonElement;
+    const upload   = document.getElementById("modelUpload")  as HTMLInputElement;
+    const statusEl = document.getElementById("modelStatus")  as HTMLDivElement;
+
+    toggle.addEventListener("click", () => panel.classList.toggle("show"));
+
+    function setStatus(msg: string) { statusEl.textContent = msg; }
+
+    async function doSwap(src: string) {
+        setStatus("読み込み中...");
+        loadBtn.disabled = true;
+        upload.disabled  = true;
+        try {
+            await onSwap(src);
+            setStatus("読み込み完了！");
+            setTimeout(() => setStatus(""), 2500);
+            panel.classList.remove("show");
+        } catch (e) {
+            setStatus("エラー: " + String(e));
+        } finally {
+            loadBtn.disabled = false;
+            upload.disabled  = false;
+        }
+    }
+
+    loadBtn.addEventListener("click", () => {
+        const url = urlInput.value.trim();
+        if (url) doSwap(url);
+    });
+    urlInput.addEventListener("keydown", (e) => { if (e.key === "Enter") loadBtn.click(); });
+
+    upload.addEventListener("change", () => {
+        const files = upload.files;
+        if (!files || files.length === 0) return;
+
+        userModelFiles.clear();
+        let model3Key: string | null = null;
+        let model2Key: string | null = null;
+
+        for (const file of Array.from(files)) {
+            // webkitRelativePath: "FolderName/sub/file.ext" → key: "sub/file.ext"
+            const relPath = file.webkitRelativePath;
+            const parts = relPath ? relPath.split("/") : [file.name];
+            const key = parts.length > 1 ? parts.slice(1).join("/") : file.name;
+            userModelFiles.set(key, file);
+            if (file.name.endsWith(".model3.json")) model3Key = key;
+            else if (file.name.endsWith(".model.json")) model2Key = key;
+        }
+
+        const modelJsonKey = model3Key ?? model2Key;
+        if (!modelJsonKey) {
+            setStatus("model3.json が見つかりません");
+            return;
+        }
+
+        // Reset the input so the same folder can be re-selected if needed
+        upload.value = "";
+        doSwap(VIRTUAL_PREFIX + modelJsonKey);
     });
 }
 

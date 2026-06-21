@@ -119,8 +119,15 @@
             .mic-btn.recording svg { stroke: #fff; }
             @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
 
-            /* background tool */
-            .toolbar { position: fixed; top: 18px; right: 18px; }
+            /* toolbars */
+            .toolbar {
+                position: fixed;
+                top: 18px;
+                right: 18px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
             .tool-btn {
                 width: 42px;
                 height: 42px;
@@ -150,6 +157,64 @@
                 font-size: 13px;
                 font-weight: 600;
                 color: var(--muted);
+            }
+            /* model panel */
+            .model-panel {
+                position: fixed;
+                top: 70px;
+                right: 18px;
+                width: 240px;
+                padding: 14px;
+                background: var(--surface);
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                display: none;
+                z-index: 10;
+            }
+            .model-panel.show { display: block; }
+            .model-panel h4 {
+                margin: 0 0 10px;
+                font-size: 13px;
+                font-weight: 600;
+                color: var(--muted);
+            }
+            .model-url-row { display: flex; gap: 6px; margin-bottom: 10px; }
+            .model-url-row input {
+                flex: 1;
+                min-width: 0;
+                border: 1.5px solid #e0e0e0;
+                border-radius: 8px;
+                padding: 6px 8px;
+                font-size: 13px;
+                outline: none;
+                font-family: inherit;
+            }
+            .model-url-row input:focus { border-color: var(--accent); }
+            .model-load-btn {
+                flex: none;
+                border: none;
+                border-radius: 8px;
+                background: var(--accent);
+                color: #fff;
+                padding: 6px 10px;
+                font-size: 13px;
+                cursor: pointer;
+                white-space: nowrap;
+            }
+            .model-load-btn:hover { background: var(--accent-dark); }
+            .model-load-btn:disabled { opacity: 0.6; cursor: default; }
+            .model-divider {
+                text-align: center;
+                color: var(--muted);
+                font-size: 12px;
+                margin: 8px 0;
+            }
+            .model-status {
+                font-size: 12px;
+                margin-top: 8px;
+                color: var(--muted);
+                min-height: 16px;
+                word-break: break-all;
             }
             .swatches {
                 display: grid;
@@ -182,7 +247,16 @@
         <div id="stage"></div>
         <div class="bubble" id="bubble"></div>
 
+        <!-- Toolbar (right) -->
         <div class="toolbar">
+            <button class="tool-btn" id="modelToggle" title="Live2Dモデル切り替え">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </button>
             <button class="tool-btn" id="bgToggle" title="background">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -191,6 +265,21 @@
                     <path d="M21 15l-5-5L5 21" />
                 </svg>
             </button>
+        </div>
+
+        <!-- Model swap panel -->
+        <div class="model-panel" id="modelPanel">
+            <h4>Live2D Model</h4>
+            <div class="model-url-row">
+                <input type="text" id="modelUrl" placeholder="model3.json の URL" />
+                <button class="model-load-btn" id="modelLoadUrl">Load</button>
+            </div>
+            <div class="model-divider">— または —</div>
+            <label class="upload-label">
+                フォルダを選択
+                <input type="file" id="modelUpload" webkitdirectory multiple />
+            </label>
+            <div class="model-status" id="modelStatus"></div>
         </div>
 
         <div class="bg-panel" id="bgPanel">
